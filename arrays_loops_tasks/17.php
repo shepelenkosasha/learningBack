@@ -4,7 +4,7 @@ $arr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'
 $month = $arr[0];
 foreach ($arr as $key => $value) {
 	# code...
-	if ($value == 'January') {
+	if ($value == $month) {
 		# code...
 		echo '<b>' . $month . '</b>' . PHP_EOL;
 	} else {

@@ -3,29 +3,36 @@
 По желанию можете сделать проверку на корректность введения данных пользователем.*/
 
 
- ?>
+?>
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
- 	<meta charset="UTF-8">
- 	<title>PHP hw 23</title>
- </head>
- <body>
- 	
-	<form method="GET">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PHP hw 23</title>
+</head>
+<body>
+	
+	<form method="POST">
 		<input type="text" name="num">
-		<button>SUM</button>
+		<button style="
+				background-color: #34f3d4;
+				border-radius: 4px; 
+				font-weight: bold;">
+			SUM
+		</button>
 	</form>
 
- </body>
- </html>
+	<?php 
 
- <?php 
-$num = $_GET['num'];
-$sum = str_split($num);
-$sum = array_sum($sum);
+		$num = $_POST['num'];
+		$sum = str_split($num);
+		$sum = array_sum($sum);
 
-echo $sum;
+		echo $sum;
 
-  ?>
+	?>
+
+</body>
+</html>
+

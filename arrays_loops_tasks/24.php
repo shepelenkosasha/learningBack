@@ -11,22 +11,34 @@
 </head>
 <body>
 	
-	<form method="GET">
-		<input type="text" name="n">
-		<input type="text" name="num">
+	<form method="POST">
+		<input type="text" name="n" value="5">
+		<input type="text" name="num" value="442158755745">
+		<button style="
+				background-color: #343ff4;
+				cursor: pointer;
+				color: #fff993;
+				padding: 5px 20px;
+				border-radius: 5px;
+				border: none;
+				font-size: 24px; 
+				font-weight: bold;">
+			Click
+		</button>
 		<br>
-		<button>Click</button>
+		<hr>
 	</form>
+
+	<?php 
+
+		$n = $_POST['n'];
+		$num = $_POST['num'];
+		$count = substr_count($num, $n);
+		$count = '<h1>' . $count . '</h1>';
+
+		print_r($count);
+		
+	?>
 
 </body>
 </html>
-
-
-<?php 
-$n = $_GET['n'];
-$num = $_GET['num'];
-$count = substr_count($num, $n);
-
-
-print_r($count);
-?>

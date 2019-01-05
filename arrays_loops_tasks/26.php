@@ -18,12 +18,10 @@ foreach ($arr as $key => $value) {
 	} else {
 		echo $value . '<br/>';
 	}
-	
 }
 echo "<br/>";
 var_export($arr);
 echo "<br/>";
 echo $sum . ' - Сумма ' . '<br/>';
-
 
 ?>
