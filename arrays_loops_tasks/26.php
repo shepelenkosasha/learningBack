@@ -3,18 +3,18 @@
 
 $arr = [];
 
-for ($i = 0; $i < 10; $i++) { 
+for ($i = 0; $i <= 10; $i++) { 
 
 	$arr[] = rand(1, 100);
 
 }
 
-$sum = 0;
+$sum = 1;
 
 foreach ($arr as $key => $value) {
 	
 	if ($key % 2 == 0) {
-		$sum += $value;
+		$sum *= $value;
 	} else {
 		echo $value . '<br/>';
 	}
@@ -22,6 +22,6 @@ foreach ($arr as $key => $value) {
 echo "<br/>";
 var_export($arr);
 echo "<br/>";
-echo $sum . ' - Сумма ' . '<br/>';
+echo $sum . ' - произведение ' . '<br/>';
 
 ?>
